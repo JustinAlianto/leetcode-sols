@@ -38,6 +38,8 @@ class Solution:
         if not node or self.count >= k:
             return
 
+        # This recursion goes all the way to the smallest node (bottom left)
+        # before continuing the rest of the code.
         self.inorderTraversal(node.left, k)
 
         self.count += 1
@@ -45,6 +47,7 @@ class Solution:
             self.result = node.val
             return
 
+        # This recursion runs once its direct parent node "node" is traversed
         self.inorderTraversal(node.right, k)
 
 
