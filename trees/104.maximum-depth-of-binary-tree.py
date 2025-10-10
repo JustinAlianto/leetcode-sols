@@ -13,25 +13,25 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def getDepth(self, cur: Optional[TreeNode], depth) -> int:
-        left, right = cur.left, cur.right
-        if not left and not right:
-            return depth + 1
-        elif not left:
-            return self.getDepth(right, depth + 1)
-        elif not right:
-            return self.getDepth(left, depth + 1)
-        else:
-            left_depth = self.getDepth(left, depth + 1)
-            right_depth = self.getDepth(right, depth + 1)
+    # def getDepth(self, cur: Optional[TreeNode], depth) -> int:
+    #     left, right = cur.left, cur.right
+    #     if not left and not right:
+    #         return depth + 1
+    #     elif not left:
+    #         return self.getDepth(right, depth + 1)
+    #     elif not right:
+    #         return self.getDepth(left, depth + 1)
+    #     else:
+    #         left_depth = self.getDepth(left, depth + 1)
+    #         right_depth = self.getDepth(right, depth + 1)
 
-            return max(left_depth, right_depth)
+    #         return max(left_depth, right_depth)
 
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
             return 0
 
-        return self.getDepth(root, 0)
+        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
 
 # @lc code=end
