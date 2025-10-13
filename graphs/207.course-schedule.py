@@ -39,6 +39,10 @@ class Solution:
 
         return True
 
+        # TIME/SPACE COMPLEXITY: O(V + E), where:
+        # - V -> #courses
+        # - E -> #prereqs
+
         # In a typical graph adjacency list for traversal only,
         # list is the canonical structure — because:
         # - The number of neighbors is small on average.
