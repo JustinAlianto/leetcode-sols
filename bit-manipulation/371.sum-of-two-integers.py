@@ -11,7 +11,7 @@ class Solution:
         # IDEA:
         # - Use XOR to handle bit 0 + bit 0/1 cases (a ^ b)
         # - Use AND to handle when there is a carry over with
-        # bit 1 + bit 1. Need to shift to the left though (a & b << 1)
+        #   bit 1 + bit 1. Need to shift to the left though (a & b << 1)
         mask = 0xFFFFFFFF
         max_int = 0x7FFFFFFF
 
